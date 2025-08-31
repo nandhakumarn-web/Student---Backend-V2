@@ -19,11 +19,11 @@ public class Batch {
 
 	private String batchName;
 
-	@ManyToOne
+	@ManyToOne(fetch = FetchType.EAGER) 
 	@JoinColumn(name = "course_id")
 	private Course course;
 
-	@ManyToOne
+	@ManyToOne(fetch = FetchType.EAGER) 
 	@JoinColumn(name = "trainer_id")
 	private Trainer trainer;
 
