@@ -11,5 +11,6 @@ import java.util.List;
 public interface NotificationRepository extends JpaRepository<Notification, Long> {
 	List<Notification> findByUserOrderByCreatedAtDesc(User user);
 
-	List<Notification> findByUserAndReadFalse(User user);
+	// Updated method name to match the new field name 'isRead'
+	List<Notification> findByUserAndIsReadFalse(User user);
 }
